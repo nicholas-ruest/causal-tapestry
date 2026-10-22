@@ -89,7 +89,7 @@ mod tests {
             .unwrap();
         index.insert("far", vec![1.0; DIMENSION], "scaled").unwrap();
         assert_eq!(
-            index.search(&vec![0.1; DIMENSION], 1).unwrap()[0].incident_id,
+            index.search(&[0.1; DIMENSION], 1).unwrap()[0].incident_id,
             "near"
         );
     }
