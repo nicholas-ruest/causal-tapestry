@@ -42,5 +42,21 @@ RuVector release removes it. All other advisories remain denied.
 - Darwin suite verify: `/home/ruv/.ruos/activity/2026-10-22/run-cd-home-ruv-work-causal-tapestry-candidate-n-021123.log`
 - Flywheel status: `/home/ruv/.ruos/activity/2026-10-22/run-cd-home-ruv-work-causal-tapestry-candidate-r-021159.log`
 
-Structural-checker and GitHub CI results are publication gates and are added only from
-their actual stdout/readback; structural success alone never proves semantic quality.
+## Structural and semantic review
+
+The checker at `nicholas-ruest/ruvnet-dream-machine`
+`80f006f6960bc4e491e97f51e890ff708e81aa88` passed its three regression tests.
+Its first candidate run correctly failed all undersized ADR/DDD bodies. After those
+records gained decision-specific implementation and failure semantics, the exact
+indexed checkout at `1617e1d97f2099500761173a02b93923818140e3` exited 0 with
+`STRUCTURAL_PASS_REQUIRES_EVIDENCE_REVIEW`: 25 ADRs, 12 DDDs, 22 implemented crates,
+and two animated SVGs. Receipt:
+`/home/ruv/.ruos/activity/2026-10-22/run-cd-home-ruv-work-causal-tapestry-candidate-g-021959.log`.
+
+Independent review then confirmed 22 Cargo workspace members and all 22 on the
+`ct-cli` executable dependency path. Source-bound inspection found real
+`ruvector_core::VectorDB` construction/search, `rvf_runtime::RvfStore`
+create/ingest/reopen/query, and `regorus::Engine` policy load/input/rule evaluation.
+The 600-event benchmark and locked tests exercise those same paths. The checker is
+therefore corroborating evidence only; GitHub PR CI and final public readback remain
+separate publication gates.
