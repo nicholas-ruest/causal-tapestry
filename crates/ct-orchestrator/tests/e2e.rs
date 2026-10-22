@@ -59,14 +59,7 @@ fn ablations_change_observable_capability() {
     )
     .unwrap();
     let no_rvf_path = dir.path().join("norvf.rvf");
-    let no_rvf = investigate(
-        "no-rvf",
-        INCIDENT,
-        &no_rvf_path,
-        &config,
-        Mode::NoRvf,
-    )
-    .unwrap();
+    let no_rvf = investigate("no-rvf", INCIDENT, &no_rvf_path, &config, Mode::NoRvf).unwrap();
     assert!(!combined.analogues.is_empty());
     assert!(no_vector.analogues.is_empty());
     assert_eq!(
