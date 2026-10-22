@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">Causal Tapestry incident reconstruction</title><desc id="desc">Telemetry threads converge into causal evidence, governed remediation, and an RVF bundle.</desc>
+<style>
+.bg{fill:#09111f}.panel{fill:#111d31;stroke:#284466;stroke-width:2}.thread{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:12 10;animation:flow 5s linear infinite}.cyan{stroke:#5eead4}.amber{stroke:#fbbf24}.rose{stroke:#fb7185}.node{fill:#0f2942;stroke:#7dd3fc;stroke-width:2}.t{fill:#e6f4ff;font:600 18px system-ui}.s{fill:#9fb7cc;font:14px system-ui}.pulse{animation:pulse 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes flow{to{stroke-dashoffset:-88}}@keyframes pulse{50%{opacity:.55;transform:scale(.97)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect class="bg" width="1200" height="360" rx="24"/>
+<text class="t" x="56" y="58" style="font-size:30px">Causal Tapestry</text><text class="s" x="56" y="84">From fragmented telemetry to replayable, policy-governed causal evidence</text>
+<rect class="panel" x="50" y="115" width="250" height="185" rx="18"/><text class="t" x="82" y="151">Distributed signals</text>
+<circle class="node pulse" cx="92" cy="190" r="12"/><text class="s" x="118" y="196">traces + logs</text><circle class="node pulse" cx="92" cy="232" r="12"/><text class="s" x="118" y="238">clock-skewed spans</text><circle class="node pulse" cx="92" cy="274" r="12"/><text class="s" x="118" y="280">three environments</text>
+<path class="thread cyan" d="M300 180 C390 180 390 142 470 142"/><path class="thread amber" d="M300 220 C390 220 390 220 470 220"/><path class="thread rose" d="M300 260 C390 260 390 298 470 298"/>
+<rect class="panel" x="470" y="115" width="260" height="185" rx="18"/><text class="t" x="502" y="151">Causal loom</text><text class="s" x="502" y="190">invariant ranking</text><text class="s" x="502" y="222">anytime-valid e-values</text><text class="s" x="502" y="254">RuVector analogues</text><text class="s" x="502" y="286">Regorus policy gate</text>
+<path class="thread cyan" d="M730 205 C810 205 810 175 875 175"/><path class="thread amber" d="M730 245 C810 245 810 265 875 265"/>
+<rect class="panel" x="875" y="115" width="275" height="185" rx="18"/><text class="t" x="907" y="151">Governed evidence</text><text class="s" x="907" y="195">ranked root causes</text><text class="s" x="907" y="229">reversible proposal</text><text class="s" x="907" y="263">append-only RVF bundle</text>
+</svg>
