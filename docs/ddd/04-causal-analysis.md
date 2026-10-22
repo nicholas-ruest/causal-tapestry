@@ -1,5 +1,9 @@
 # DDD-04: Causal Analysis
 
+
+## Implementation and failure semantics
+
+The context receives a reconstructed timeline partitioned by environment and emits ranked `Hypothesis` entities with per-environment support. It never consumes recalled analogues while estimating current causality, preventing historical similarity from leaking into the causal score. `ct-hypothesis` generates eligible causes and `ct-causal` ranks invariant support. The e-process is a downstream collaborator. Frozen scenarios and ablations distinguish causal evidence from recall.
 ## Responsibility
 
 Own hypothesis lifecycle and promotion.

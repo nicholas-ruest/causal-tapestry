@@ -1,5 +1,9 @@
 # ADR-0001: System boundary
 
+
+## Implementation and failure semantics
+
+The `ct-orchestrator` application service owns the complete investigation transaction, while `ct-cli` is only an input/output adapter. Its output is a typed report plus an RVF path; there is deliberately no port capable of mutating production. Cancellation or adapter failure returns a typed error before a remediation can be represented as executed. Reviewers validate the boundary by searching dependency edges and confirming that only evidence and proposal types cross the application surface.
 Status: Accepted for implementation
 
 ## Context

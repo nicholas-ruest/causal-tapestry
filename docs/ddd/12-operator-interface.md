@@ -1,5 +1,9 @@
 # DDD-12: Operator Interface
 
+
+## Implementation and failure semantics
+
+The operator interface owns argument parsing, safe file reads, configuration selection, and JSON rendering through `ct-cli`. It delegates all investigation semantics to the orchestrator and has no direct dependency on RuVector, Regorus, or RVF. Invalid input paths and domain errors produce a nonzero exit without claiming evidence. The quickstart uses the checked-in fixture and locked dependencies; structured output exposes hypotheses, proposal, decision, root, and bundle path.
 ## Responsibility
 
 Own CLI input/output and replay commands.

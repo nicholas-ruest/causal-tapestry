@@ -1,5 +1,9 @@
 # ADR-0024: Security and limits
 
+
+## Implementation and failure semantics
+
+Admission limits, numeric validation, opaque identities, minimized policy input, safe output paths, and absence of an execution port form the primary safety envelope. Cargo-deny rejects unknown sources and unapproved licenses; the one ignored advisory is documented as an unmaintained transitive bincode release, not a vulnerability. Regorus defaults to deny on evaluation failure. Malformed telemetry is proven not to create an RVF artifact or partial evidence chain.
 Status: Accepted for implementation
 
 ## Context

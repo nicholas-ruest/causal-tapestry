@@ -1,5 +1,9 @@
 # DDD-07: Remediation Planning
 
+
+## Implementation and failure semantics
+
+The `RemediationProposal` aggregate is a reversible suggestion derived from the leading supported hypothesis and validated topology. Its invariants require a target, bounded blast radius, rollback description, and the absence of execution authority. `ct-remediation` is the sole owner. Policy Governance consumes the proposal, but only an external system could later act. Tests assert reversibility, and the README states clearly that no production mutation occurs.
 ## Responsibility
 
 Own non-executable proposals.

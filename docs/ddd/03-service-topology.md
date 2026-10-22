@@ -1,5 +1,9 @@
 # DDD-03: Service Topology
 
+
+## Implementation and failure semantics
+
+The topology aggregate groups directed service edges and event participation after reconstruction has established valid causality. `ct-topology` owns edge aggregation and deterministic ordering; no other context may infer blast radius from raw strings. Hypothesis generation reads service nodes, while remediation planning reads bounded neighbourhood size. The edge test fixes direction and multiplicity, and the safe fixture demonstrates topology-derived proposal scope.
 ## Responsibility
 
 Own service/deployment graph.

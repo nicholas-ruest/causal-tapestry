@@ -1,5 +1,9 @@
 # DDD-11: Evaluation
 
+
+## Implementation and failure semantics
+
+Evaluation owns the frozen fixture, expansion rule, iteration count, measurement schema, and interpretation of ablations. It does not own production behavior or tune thresholds after results. The benchmark executable calls the public orchestrator for every mode, so it measures the same upstream and evidence boundaries as the CLI. Corpus and lockfile hashes bind reproducibility. Capability fields accompany latency to prevent faster-but-empty baselines from appearing superior.
 ## Responsibility
 
 Own datasets, baselines and ablation comparison.

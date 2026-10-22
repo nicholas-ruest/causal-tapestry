@@ -1,5 +1,9 @@
 # ADR-0002: Corpus contract
 
+
+## Implementation and failure semantics
+
+`ct-ingest` accepts newline-delimited JSON under explicit byte, event-count, identifier, and numeric-range limits before any upstream engine is called. A malformed line aborts the whole corpus rather than creating a partial investigation with ambiguous provenance. The fixture hash binds benchmarks to exact bytes. Unit tests cover empty input, malformed structures, and duplicate identities; the end-to-end failure test confirms that no RVF file exists after admission failure.
 Status: Accepted for implementation
 
 ## Context
