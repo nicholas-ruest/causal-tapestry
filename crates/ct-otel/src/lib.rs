@@ -2,7 +2,6 @@
 use ct_errors::{Error, Result};
 use ct_types::Event;
 use serde_json::Value;
-use std::collections::BTreeMap;
 
 pub fn parse_line(line: &str) -> Result<Event> {
     let value: Value = serde_json::from_str(line)
@@ -31,7 +30,7 @@ pub fn parse_line(line: &str) -> Result<Event> {
                 .filter_map(|(k, v)| v.as_str().map(|s| (k.clone(), s.to_owned())))
                 .collect()
         })
-        .unwrap_or_else(BTreeMap::new);
+        .unwrap_or_default();
     Ok(Event {
         id: text("id")?,
         service: text("service")?,
