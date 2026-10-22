@@ -1,0 +1,13 @@
+[package]
+name = "ct-config"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ct_errors = { package = "ct-errors", path = "../ct-errors" }
+
+[lints]
+workspace = true
+

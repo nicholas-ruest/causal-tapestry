@@ -1,0 +1,31 @@
+[package]
+name = "ct-orchestrator"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ct_types = { package = "ct-types", path = "../ct-types" }
+ct_errors = { package = "ct-errors", path = "../ct-errors" }
+ct_config = { package = "ct-config", path = "../ct-config" }
+ct_ingest = { package = "ct-ingest", path = "../ct-ingest" }
+ct_normalize = { package = "ct-normalize", path = "../ct-normalize" }
+ct_timeline = { package = "ct-timeline", path = "../ct-timeline" }
+ct_topology = { package = "ct-topology", path = "../ct-topology" }
+ct_hypothesis = { package = "ct-hypothesis", path = "../ct-hypothesis" }
+ct_causal = { package = "ct-causal", path = "../ct-causal" }
+ct_embedding = { package = "ct-embedding", path = "../ct-embedding" }
+ct_ruvector = { package = "ct-ruvector", path = "../ct-ruvector" }
+ct_recall = { package = "ct-recall", path = "../ct-recall" }
+ct_remediation = { package = "ct-remediation", path = "../ct-remediation" }
+ct_policy = { package = "ct-policy", path = "../ct-policy" }
+ct_evidence = { package = "ct-evidence", path = "../ct-evidence" }
+serde_json.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true
+

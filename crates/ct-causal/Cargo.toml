@@ -1,0 +1,14 @@
+[package]
+name = "ct-causal"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ct_types = { package = "ct-types", path = "../ct-types" }
+ct_evalue = { package = "ct-evalue", path = "../ct-evalue" }
+
+[lints]
+workspace = true
+
