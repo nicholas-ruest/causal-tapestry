@@ -8,6 +8,7 @@ rust-version.workspace = true
 [dependencies]
 ct_types = { package = "ct-types", path = "../ct-types" }
 ct_evalue = { package = "ct-evalue", path = "../ct-evalue" }
+ct_errors = { package = "ct-errors", path = "../ct-errors" }
 
 [lints]
 workspace = true
