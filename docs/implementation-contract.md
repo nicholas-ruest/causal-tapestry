@@ -12,13 +12,13 @@
 
 ## Acceptance commands
 
-cargo fmt --check  
-cargo clippy --workspace --all-targets --all-features -- -D warnings  
-cargo test --workspace --locked  
+cargo fmt --all -- --check  
+cargo clippy --locked --workspace --all-targets --all-features -- -D warnings  
+cargo test --locked --workspace  
 cargo deny check  
-cargo run -p ct-cli -- investigate examples/incident.json --policy policies/remediation.rego --out evidence  
-cargo run -p ct-cli -- replay evidence/investigation.rvf  
-cargo run -p ct-cli -- benchmark --seed 20261021
+cargo run --locked -p ct-cli -- --incident-id inc-2026-10-21 --input examples/cache-collapse.jsonl --output evidence.rvf  
+./scripts/run-benchmark.sh  
+node /home/ruv/work/ruvnet-dream-machine-checker/scripts/check-project-contract.mjs /home/ruv/work/causal-tapestry-candidate
 
 ## Evidence binding
 
