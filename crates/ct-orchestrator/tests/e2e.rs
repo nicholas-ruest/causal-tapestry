@@ -50,12 +50,33 @@ fn ablations_change_observable_capability() {
         Mode::NoRegorus,
     )
     .unwrap();
+    let no_eprocess = investigate(
+        "no-eprocess",
+        INCIDENT,
+        &dir.path().join("noeprocess.rvf"),
+        &config,
+        Mode::NoEProcess,
+    )
+    .unwrap();
+    let no_rvf_path = dir.path().join("norvf.rvf");
+    let no_rvf = investigate(
+        "no-rvf",
+        INCIDENT,
+        &no_rvf_path,
+        &config,
+        Mode::NoRvf,
+    )
+    .unwrap();
     assert!(!combined.analogues.is_empty());
     assert!(no_vector.analogues.is_empty());
     assert_eq!(
         no_policy.decision.reasons[0],
         "Regorus ablated: unsafe allow baseline"
     );
+    assert!(!no_eprocess.decision.allowed);
+    assert_eq!(no_eprocess.top_hypotheses[0].e_value, 1.0);
+    assert_eq!(no_rvf.event_count, combined.event_count);
+    assert!(!no_rvf_path.exists());
 }
 
 #[test]
