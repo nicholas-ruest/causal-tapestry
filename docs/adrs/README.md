@@ -1,0 +1,30 @@
+# Architecture decision records
+
+These 25 records are authoritative for the first implementation.
+
+- [ADR-0001: System boundary](0001-system-boundary.md)
+- [ADR-0002: Corpus contract](0002-corpus-contract.md)
+- [ADR-0003: Canonical identities](0003-canonical-identities.md)
+- [ADR-0004: Clock correction](0004-clock-correction.md)
+- [ADR-0005: Partial-order timeline](0005-partial-order-timeline.md)
+- [ADR-0006: Topology extraction](0006-topology-extraction.md)
+- [ADR-0007: Invariant causal ranking](0007-invariant-causal-ranking.md)
+- [ADR-0008: Anytime-valid e-process](0008-anytime-valid-e-process.md)
+- [ADR-0009: Hypothesis pruning](0009-hypothesis-pruning.md)
+- [ADR-0010: RuVector analogue memory](0010-ruvector-analogue-memory.md)
+- [ADR-0011: Deterministic embeddings](0011-deterministic-embeddings.md)
+- [ADR-0012: Recall fusion](0012-recall-fusion.md)
+- [ADR-0013: Regorus policy gate](0013-regorus-policy-gate.md)
+- [ADR-0014: Proposal safety envelope](0014-proposal-safety-envelope.md)
+- [ADR-0015: Policy input minimization](0015-policy-input-minimization.md)
+- [ADR-0016: RVF evidence container](0016-rvf-evidence-container.md)
+- [ADR-0017: Append-only evidence](0017-append-only-evidence.md)
+- [ADR-0018: Replay determinism](0018-replay-determinism.md)
+- [ADR-0019: Saga orchestration](0019-saga-orchestration.md)
+- [ADR-0020: Configuration](0020-configuration.md)
+- [ADR-0021: Observability](0021-observability.md)
+- [ADR-0022: Benchmark design](0022-benchmark-design.md)
+- [ADR-0023: Ablation contract](0023-ablation-contract.md)
+- [ADR-0024: Security and limits](0024-security-and-limits.md)
+- [ADR-0025: Publication gate](0025-publication-gate.md)
+

@@ -1,0 +1,22 @@
+[package]
+name = "ct-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "causal-tapestry"
+path = "src/main.rs"
+
+[dependencies]
+ct_types = { package = "ct-types", path = "../ct-types" }
+ct_errors = { package = "ct-errors", path = "../ct-errors" }
+ct_config = { package = "ct-config", path = "../ct-config" }
+ct_orchestrator = { package = "ct-orchestrator", path = "../ct-orchestrator" }
+serde_json.workspace = true
+clap.workspace = true
+
+[lints]
+workspace = true
+

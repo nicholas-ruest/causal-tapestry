@@ -1,0 +1,15 @@
+[package]
+name = "ct-recall"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ct_types = { package = "ct-types", path = "../ct-types" }
+ct_errors = { package = "ct-errors", path = "../ct-errors" }
+ct_ruvector = { package = "ct-ruvector", path = "../ct-ruvector" }
+
+[lints]
+workspace = true
+

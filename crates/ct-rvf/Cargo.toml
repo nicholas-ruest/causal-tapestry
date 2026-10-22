@@ -1,0 +1,19 @@
+[package]
+name = "ct-rvf"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ct_types = { package = "ct-types", path = "../ct-types" }
+ct_errors = { package = "ct-errors", path = "../ct-errors" }
+serde_json.workspace = true
+rvf-runtime.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true
+

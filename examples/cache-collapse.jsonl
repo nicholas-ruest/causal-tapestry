@@ -1,0 +1,13 @@
+{"id":"e01","service":"edge","partition":"us-east","timestamp_ms":1000,"kind":"request","severity":0.10,"attributes":{"clock_offset_ms":"4"}}
+{"id":"e02","service":"api","partition":"us-east","timestamp_ms":1010,"kind":"latency","severity":0.44,"attributes":{"parent_id":"e01","clock_offset_ms":"4"}}
+{"id":"e03","service":"cache","partition":"us-east","timestamp_ms":1020,"kind":"error.cache_miss","severity":0.98,"attributes":{"parent_id":"e02","clock_offset_ms":"4"}}
+{"id":"e04","service":"db","partition":"us-east","timestamp_ms":1030,"kind":"latency","severity":0.76,"attributes":{"parent_id":"e03","clock_offset_ms":"4"}}
+{"id":"e05","service":"edge","partition":"eu-west","timestamp_ms":990,"kind":"request","severity":0.08,"attributes":{"clock_offset_ms":"-7"}}
+{"id":"e06","service":"api","partition":"eu-west","timestamp_ms":1002,"kind":"latency","severity":0.39,"attributes":{"parent_id":"e05","clock_offset_ms":"-7"}}
+{"id":"e07","service":"cache","partition":"eu-west","timestamp_ms":1012,"kind":"error.cache_miss","severity":0.94,"attributes":{"parent_id":"e06","clock_offset_ms":"-7"}}
+{"id":"e08","service":"db","partition":"eu-west","timestamp_ms":1022,"kind":"latency","severity":0.69,"attributes":{"parent_id":"e07","clock_offset_ms":"-7"}}
+{"id":"e09","service":"edge","partition":"ap-south","timestamp_ms":1008,"kind":"request","severity":0.12,"attributes":{"clock_offset_ms":"12"}}
+{"id":"e10","service":"api","partition":"ap-south","timestamp_ms":1018,"kind":"latency","severity":0.41,"attributes":{"parent_id":"e09","clock_offset_ms":"12"}}
+{"id":"e11","service":"cache","partition":"ap-south","timestamp_ms":1028,"kind":"error.cache_miss","severity":0.96,"attributes":{"parent_id":"e10","clock_offset_ms":"12"}}
+{"id":"e12","service":"db","partition":"ap-south","timestamp_ms":1038,"kind":"latency","severity":0.72,"attributes":{"parent_id":"e11","clock_offset_ms":"12"}}
+
