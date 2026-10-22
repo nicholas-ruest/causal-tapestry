@@ -2,7 +2,7 @@ use ct_config::Config;
 use ct_orchestrator::{investigate, Mode};
 use std::time::Instant;
 
-const INCIDENT: &str = include_str!("../../../../examples/cache-collapse.jsonl");
+const INCIDENT: &str = include_str!("../../../examples/cache-collapse.jsonl");
 
 fn main() {
     println!("mode,iterations,total_us,mean_us,analogues,allowed,top_e_value");
