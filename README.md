@@ -101,7 +101,15 @@ cargo deny check
 The benchmark fixes its corpus, runs 25 iterations per mode, and reports combined,
 RuVector-free, Regorus-free, e-process-free, and RVF-free executions. Current
 candidate results are recorded in [benchmark evidence](docs/evidence/benchmark.md);
-commands and raw receipts are in [validation evidence](docs/evidence/validation.md).
+commands and raw receipts are in [validation evidence](docs/validation.md).
+
+| Mode | Events | Mean (µs) | Analogues | Allowed | Top e-value | Capability loss |
+|---|---:|---:|---:|---|---:|---|
+| Combined | 600 | 4,387 | 2 | yes | 2.067250 | none |
+| No RuVector | 600 | 4,287 | 0 | yes | 2.067250 | analogue recall |
+| No Regorus | 600 | 4,008 | 2 | yes | 2.067250 | policy enforcement replaced by explicit unsafe baseline |
+| No e-process | 600 | 4,389 | 2 | no | 1.000000 | anytime-valid evidence and authorization |
+| No RVF | 600 | 2,581 | 2 | yes | 2.067250 | durable bundle and readback |
 
 ## Maturity and limitations
 
