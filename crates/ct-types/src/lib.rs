@@ -86,4 +86,3 @@ pub struct InvestigationReport {
     pub evidence_root: String,
     pub rvf_path: String,
 }
-

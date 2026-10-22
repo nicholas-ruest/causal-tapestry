@@ -25,13 +25,19 @@ impl Default for Config {
 impl Config {
     pub fn validate(&self) -> Result<()> {
         if self.max_events == 0 || self.max_hypotheses == 0 {
-            return Err(Error::InvalidInput("resource ceilings must be positive".into()));
+            return Err(Error::InvalidInput(
+                "resource ceilings must be positive".into(),
+            ));
         }
         if self.vector_dimension != 8 {
-            return Err(Error::InvalidInput("the v1 incident embedding has dimension 8".into()));
+            return Err(Error::InvalidInput(
+                "the v1 incident embedding has dimension 8".into(),
+            ));
         }
         if !self.min_e_value.is_finite() || self.min_e_value < 1.0 {
-            return Err(Error::InvalidInput("min_e_value must be finite and at least one".into()));
+            return Err(Error::InvalidInput(
+                "min_e_value must be finite and at least one".into(),
+            ));
         }
         Ok(())
     }
@@ -41,6 +47,7 @@ impl Config {
 mod tests {
     use super::*;
     #[test]
-    fn defaults_validate() { Config::default().validate().unwrap(); }
+    fn defaults_validate() {
+        Config::default().validate().unwrap();
+    }
 }
-

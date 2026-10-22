@@ -12,18 +12,26 @@ pub fn ingest_json_lines(incident_id: &str, input: &str, max_events: usize) -> R
     let mut ids = HashSet::new();
     for line in input.lines().filter(|line| !line.trim().is_empty()) {
         if events.len() == max_events {
-            return Err(Error::InvalidInput(format!("event ceiling {max_events} exceeded")));
+            return Err(Error::InvalidInput(format!(
+                "event ceiling {max_events} exceeded"
+            )));
         }
         let event = parse_line(line)?;
         if !ids.insert(event.id.clone()) {
-            return Err(Error::InvalidInput(format!("duplicate event id {}", event.id)));
+            return Err(Error::InvalidInput(format!(
+                "duplicate event id {}",
+                event.id
+            )));
         }
         events.push(event);
     }
     if events.is_empty() {
         return Err(Error::InvalidInput("corpus has no events".into()));
     }
-    Ok(Corpus { incident_id: incident_id.to_owned(), events })
+    Ok(Corpus {
+        incident_id: incident_id.to_owned(),
+        events,
+    })
 }
 
 #[cfg(test)]
@@ -35,4 +43,3 @@ mod tests {
         assert!(ingest_json_lines("i", &format!("{line}\n{line}"), 3).is_err());
     }
 }
-
